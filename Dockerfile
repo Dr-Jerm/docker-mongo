@@ -1,7 +1,7 @@
 # run with:
 # -v /data/compromise:/data/compromise
 # example:
-# sudo docker run -name mongo-compromise -d -v /data/compromise:/data/compromise -p 2001:27017 drjerm/ubuntu-mongo
+# sudo docker run -name mongo-compromise -d -v /data/compromise:/data/compromise drjerm/ubuntu-mongo
 
 FROM ubuntu
 
