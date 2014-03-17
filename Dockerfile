@@ -1,11 +1,11 @@
 # run with:
-# -v /data/compromise:/data/compromise
+# -v /data/[hostDatabaseDirectory]:/data
 # example:
-# sudo docker run -name mongo-compromise -d -v /data/compromise:/data/compromise drjerm/ubuntu-mongo
+# sudo docker run -name mongo-compromise -d -v /data/compromise:/data drjerm/ubuntu-mongo
 
 FROM ubuntu
 
-VOLUME ["/data/compromise"]
+VOLUME ["/data/"]
 
 RUN apt-get update
 
@@ -19,4 +19,4 @@ RUN apt-get update
 RUN apt-get install mongodb-10gen
 
 EXPOSE 27017
-ENTRYPOINT ["mongod", "-f", "/data/compromise/mongodb.conf"]
+ENTRYPOINT ["mongod", "-f", "/data/mongodb.conf"]
