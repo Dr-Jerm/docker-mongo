@@ -1,8 +1,7 @@
 # run with:
 # -v /data/[hostDatabaseDirectory]:/data
 # example:
-# sudo docker run -name mongo-compromise -d -v /data/compromise:/data drjerm/ubuntu-mongo
-
+# sudo docker run --name mongo-compromise -v /data/compromise:/data -d drjerm/ubuntu-mongo
 FROM ubuntu:latest
 
 MAINTAINER Jeremy R Bernstein <utilityjerm@gmail.com>
